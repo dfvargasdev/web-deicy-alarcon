@@ -1,59 +1,106 @@
-# Sitio Web - Neuropsicología Dra. Deicy Alarcón Montaño
+# Neuropsicología Dra. Deicy Alarcón Montano
 
-Sitio web profesional para la Dra. Deicy Alarcón Montaño, Psicóloga Clínica especializada en Neuropsicología, ubicada en Clínica Medilaser, Neiva, Huila.
+Sitio web profesional para la Dra. Deicy Alarcón Montano, especialista en Neuropsicología en Neiva, Colombia.
 
-## 🧠 Sobre el Proyecto
+## 🏥 Información del Profesional
 
-To start a local development server, run:
+- **Nombre**: Dra. Deicy Alarcón Montano
+- **Especialidad**: Neuropsicología
+- **Ubicación**: Clínica Medilaser, Neiva, Huila, Colombia
+- **Servicios**: Evaluación, diagnóstico y rehabilitación neuropsicológica
 
+## 🚀 Tecnologías Utilizadas
+
+- **Angular 19+** - Framework principal con arquitectura zoneless
+- **TypeScript** - Lenguaje de programación
+- **Bootstrap 5** - Framework CSS para diseño responsivo
+- **SCSS** - Preprocesador CSS
+- **Font Awesome** - Librería de iconos
+- **Angular SSR** - Server-Side Rendering para mejor SEO
+
+## 🔧 Instalación y Desarrollo
+
+### Prerequisitos
+- Node.js (v18 o superior)
+- npm o yarn
+- Angular CLI
+
+### Instalación
 ```bash
+# Clonar el repositorio
+git clone git@github.com:dfvargasdev/web-deicy-alarcon.git
+
+# Instalar dependencias
+cd web-deicy-alarcon
+npm install
+
+# Iniciar servidor de desarrollo
 ng serve
+
+# El sitio estará disponible en http://localhost:4200
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### Build de Producción
 ```bash
-ng generate component component-name
+# Generar build optimizado
+ng build --configuration production
+
+# Los archivos estarán en dist/neuropsicologia-deicy/browser/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🌐 Despliegue
 
+### GitHub Pages
+
+**URL del sitio**: https://dfvargasdev.github.io/web-deicy-alarcon/
+
+#### Deploy Manual
 ```bash
-ng generate --help
+# Ejecutar script de deploy (PowerShell)
+.\deploy-gh-pages.ps1
+
+# O usando Bash
+./deploy-gh-pages.sh
 ```
 
-## Building
+#### Configuración en GitHub
+1. Ve a Settings → Pages en tu repositorio
+2. Selecciona "Deploy from a branch"
+3. Selecciona la rama `gh-pages`
+4. Carpeta: `/ (root)`
 
-To build the project run:
+### Otras Plataformas
+Los archivos de producción están listos para:
+- **Netlify** - Drag & drop del ZIP
+- **Vercel** - Auto-deploy desde GitHub
+- **Firebase Hosting**
+- **AWS S3 + CloudFront**
 
-```bash
-ng build
-```
+## 📋 Características
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- ✅ Diseño responsivo (móvil, tablet, escritorio)
+- ✅ SEO optimizado con meta tags
+- ✅ Carga rápida con lazy loading
+- ✅ Accesibilidad web (WCAG)
+- ✅ Pre-renderizado SSR
+- ✅ Favicon personalizado de neuropsicología
 
-## Running unit tests
+## 🔄 Workflow de Git
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- **main**: Rama principal (código fuente)
+- **develop**: Rama de desarrollo
+- **production**: Rama para releases
+- **gh-pages**: Rama para GitHub Pages (solo archivos estáticos)
 
-```bash
-ng test
-```
+## 📞 Información de Contacto
 
-## Running end-to-end tests
+- **Teléfono**: [Número a definir]
+- **Email**: [Email a definir]
+- **Dirección**: Clínica Medilaser, Neiva, Huila
+- **Redes sociales**: [A definir]
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Desarrollado por**: Diego Vargas  
+**Fecha**: Julio 2025  
+**Versión**: 1.0.0
