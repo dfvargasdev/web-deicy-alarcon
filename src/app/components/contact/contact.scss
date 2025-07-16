@@ -1,0 +1,240 @@
+.contact-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.contact-info {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  
+  i {
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.contact-details {
+  flex: 1;
+  
+  h5 {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  p {
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+.social-links {
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    
+    i {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      transition: color 0.3s ease;
+    }
+    
+    &:hover {
+      background: var(--primary-color);
+      border-color: var(--primary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      
+      i {
+        color: white;
+      }
+    }
+    
+    &[title="WhatsApp"]:hover {
+      background: #25d366;
+      border-color: #25d366;
+    }
+    
+    &[title="Instagram"]:hover {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      border-color: #bc1888;
+    }
+    
+    &[title="Facebook"]:hover {
+      background: #1877f2;
+      border-color: #1877f2;
+    }
+    
+    &[title="LinkedIn"]:hover {
+      background: #0077b5;
+      border-color: #0077b5;
+    }
+  }
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  
+  .form-label {
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control,
+  .form-select {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    
+    &:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.2rem rgba(44, 90, 160, 0.25);
+    }
+    
+    &.is-invalid {
+      border-color: #dc3545;
+    }
+    
+    &.is-valid {
+      border-color: #28a745;
+    }
+  }
+  
+  .btn-primary {
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .form-check-input {
+    border-radius: 4px;
+    
+    &:checked {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(44, 90, 160, 0.25);
+    }
+  }
+  
+  .invalid-feedback {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+}
+
+.map-section {
+  .map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-info,
+  .contact-form {
+    margin-bottom: 2rem;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-info,
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.75rem;
+    
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    
+    i {
+      font-size: 1rem;
+    }
+  }
+}

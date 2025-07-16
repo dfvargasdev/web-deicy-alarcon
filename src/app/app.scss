@@ -1,0 +1,21 @@
+// Estilos para el componente principal de la aplicación
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+// Asegurar que todas las secciones se muestren en vertical
+app-hero,
+app-about,
+app-services,
+app-contact {
+  display: block;
+  width: 100%;
+}
+
+// Scroll suave
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,199 @@
+.services-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    
+    &::before {
+      transform: scaleX(1);
+    }
+    
+    .service-icon {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    }
+  }
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  
+  i {
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+.service-content {
+  flex: 1;
+}
+
+.service-title {
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.service-description {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  
+  li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 1.5rem;
+    transition: all 0.3s ease;
+    
+    &::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 5 Free', sans-serif;
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-size: 0.8rem;
+    }
+    
+    &:hover {
+      color: var(--primary-color);
+      transform: translateX(5px);
+    }
+  }
+}
+
+.service-duration {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 1rem;
+  background: rgba(var(--primary-color), 0.05);
+  border-radius: 10px;
+  border-left: 3px solid var(--primary-color);
+  
+  i {
+    color: var(--primary-color);
+  }
+}
+
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .btn-light {
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: var(--primary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 991px) {
+  .service-card {
+    margin-bottom: 2rem;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .service-features li:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    padding: 1.5rem;
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    
+    i {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .cta-section {
+    padding: 2rem !important;
+    
+    h3 {
+      font-size: 1.3rem;
+    }
+    
+    .btn-lg {
+      font-size: 1rem;
+      padding: 0.75rem 2rem;
+    }
+  }
+}
